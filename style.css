@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0d6b9;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    color: black;
+}
+
+#header {
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+}
+
+.ngoc-portfolio .container {
+    padding: 10px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.SiteLogo {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 5px 10px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav .fa-bars, nav ul .fa-square-xmark {
+    display: none;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: oblique;
+    font-weight: 300;
+}
+
+/* -------- introduction --------- */
+
+#intro {
+    padding: 30px 0%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.intro-col-1 {
+    flex-basis: 30%;
+}
+.intro-col-1 img {
+    margin: 20px 0%;
+    width: auto;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.intro-col-2 {
+    flex-basis: 60%;
+}
+
+.intro-col-2 h1 span {
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+}
+
+.intro-col-2 p {
+    padding-top: 20px;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    line-height: 1.6;
+}
+
+/*---------- experience ----------- */
+
+#experience {
+    padding: 40px 0;
+}
+
+.section-header {
+    padding: 0 0 20px 0px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.section-description {
+    padding: 5px 0 50px 0;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+}
+
+.card {
+    background-color: #EDECE8;
+    width: 100% !important;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+.card-text {
+    font-family: 'Playfair Display', serif;
+    font-style: oblique;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* Straight timeline line line*/
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: rgb(55, 55, 55);
+    transform: translateX(-50%);
+}
+
+.content-container {
+    position: relative;
+    width: calc(50% - 40px);
+    margin-bottom: 50px;
+}
+
+.content-container.left {
+    left: 0;
+}
+
+.content-container.right {
+    left: calc(50% + 40px);
+}
+
+/* Circle dot */
+
+.content-container::before {
+    content:'';
+    position: absolute;
+    top: 80px; /* Changed from 50px to align with card titles */
+    width: 20px;
+    height: 20px;
+    background-color: rgb(55, 55, 55);
+    border: 4px solid rgb(55, 55, 55);
+    border-radius: 50%;
+    z-index: 6;
+}
+
+.content-container.left::before {
+    right: -30px; 
+}
+
+.content-container.right::before {
+    left: -30px; 
+}
+/* Content box */
+
+.content {
+    padding: 20px;
+    position: relative;
+    z-index: 5;
+}
+
+/*--------Contact ------------- */
+
+#contact {
+    padding: 60px 0;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: black;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #727271;
+    transform: translateY(-5px);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0; 
+    outline: none;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px auto;
+    width: fit-content;
+    border: 1px solid #000000;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #727271;
+}
+
+#msg {
+    color:#727271;
+    margin-top: -20px;
+    display: block;
+
+}
+
+/* Responsive */
+
+/* Large tablets and small desktops */
+
+
+@media screen and (max-width: 1024px) {
+    .ngoc-portfolio .container {
+        padding: 10px 3%;
+    }
+    
+    .intro-col-1 img {
+        max-width: 350px;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .ngoc-portfolio .container {
+        padding: 10px 5%;
+    }
+
+    .SiteLogo {
+        width: 200px;
+    }
+
+    /* Navigation */
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Introduction section */
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro-col-1, .intro-col-2 {
+        flex-basis: 100%;
+    }
+
+    .intro-col-1 img {
+        max-width: 300px;
+    }
+
+    /* Timeline responsiveness */
+    .timeline-container::before {
+        left: 30px;
+    }
+
+    .content-container {
+        width: calc(100% - 80px);
+        left: 80px !important;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    .content-container::before {
+        left: -50px !important;
+        top: 60px; /* Adjusted for mobile to align with title */
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    /* Contact */
+    #contact .row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .ngoc-portfolio .container {
+        padding: 10px 4%;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: black;
+        z-index: 3;
+    }
+
+    nav ul {
+        background:#EDECE8;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+
+    nav ul .fa-square-xmark {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        font-size: 25px;
+        color:black;
+    }
+
+    .SiteLogo {
+        width: 150px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Introduction */
+    .intro-col-1 img {
+        max-width: 250px;
+    }
+
+    /* Timeline */
+    .content-container::before {
+        left: -30px !important;
+        top: 50px; 
+        width: 15px;
+        height: 15px;
+    }
+
+    .content-container {
+        width: calc(100% - 60px);
+        left: 60px !important;
+        padding-left: 20px;
+    }
+
+    .content-container::before {
+        left: -30px !important;
+        width: 15px;
+        height: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    /* Cards */
+    .card {
+        font-size: 14px;
+    }
+
+    .card-img-top {
+        height: 150px;
+    }
+
+    /* Contact form */
+    form input, form textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
+        margin-right: 12px;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 320px) {
+    .ngoc-portfolio .container {
+        padding: 10px 3%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-header {
+        font-size: 2rem;
+    }
+
+    .intro-col-1 img {
+        max-width: 200px;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
